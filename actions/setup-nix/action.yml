@@ -11,7 +11,9 @@ runs:
   using: composite
   steps:
     - name: Install Nix
-      uses: DeterminateSystems/nix-installer-action@main
+      uses: DeterminateSystems/nix-installer-action@v22
+      with:
+        summarize: false
 
     - name: Enable Nix cache
       if: inputs.enable-cache == 'true'
